@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--color-blue: #007fff;
+	--bg-color2: #5ad3fc;
+	--color-white: #f8f8ff;
+	--color-dark-gray: #333333;
+	--color-medium-gray: #555555;
+	--color-gray: #e7e7e7;
+	--color-green: #4caf50;
+	--h1-font: 'Montserrat Alternates', sans-serif;
+	--text-font: 'Montserrat', sans-serif;
+}
+
+body {
+	color: var(--color-white);
+	background-image: url(../images/bg1.jpg);
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+	font-family: var(--text-font);
+	padding: 20px;
+}
+
+/*
+#CFCFCF
+#DADADA
+#E7E7E7
+#F3F3F3
+#F8F8F8
+*/
+/*
+#007FFF
+#4CAF50
+#FF5722
+#9C27B0
+#E91E63
+#7e98ff
+#77aeff
+*/
+main {
+	max-width: 100%;
+	display: block;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25rem;
+	height: auto;
+	border: 2px solid var(--color-gray);
+	border-radius: 10px;
+	margin: 50px auto;
+	padding: 10px;
+	background-color: rgb(200, 205, 255, 0.4);
+	max-width: 100%;
+}
+
+.forms {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px;
+	max-width: 100%;
+}
+.forms label {
+	font-size: 1.5rem;
+}
+h1 {
+	font-size: 3rem;
+	font-family: var(--h1-font);
+	text-align: center;
+	min-width: 100%;
+}
+.add-container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.add-container input {
+	width: 200px;
+	min-width: 140px;
+	height: 35px;
+	padding-left: 10px;
+	border-radius: 4px;
+	border: 0.5px solid var(--color-gray);
+	font-size: 1rem;
+	background-color: transparent;
+	color: var(--color-white);
+}
+.add-container input::placeholder {
+	color: var(--color-gray);
+	font-size: 1rem;
+}
+.add-container input:focus {
+	outline: none;
+	border-color: var(--color-blue);
+}
+#add-item {
+	padding: 6px 12px;
+	border: 0.5px solid var(--color-gray);
+	background-color: transparent;
+	border-radius: 4px;
+	font-size: 1.2rem;
+	color: var(--color-white);
+	cursor: pointer;
+	transition: 0.7s;
+}
+
+#add-item:hover {
+	background-color: var(--color-blue);
+}
+.filter-container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin-top: 10px;
+	text-align: center;
+}
+select {
+	width: 150px;
+	height: 35px;
+	font-size: 1rem;
+	text-align: center;
+	border-radius: 4px;
+	border: 0.5px solid var(--color-gray);
+	background-color: transparent;
+	color: var(--color-white);
+}
+select:focus {
+	outline: none;
+	border-color: var(--color-blue);
+}
+option {
+	color: var(--color-dark-gray);
+}
+.todo-container {
+	padding: 10px;
+	width: 100%;
+	max-width: 100%;
+}
+ul {
+	list-style: none;
+	font-size: 1.2rem;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+.hidden {
+	display: none;
+}
+li span {
+	outline: none;
+}
+li button {
+	background-color: transparent;
+	border: 0.5px solid var(--color-gray);
+	padding: 3px;
+	cursor: pointer;
+	color: var(--color-gray);
+}
+li div {
+	display: flex;
+	gap: 5px;
+}
+#done-btn:hover {
+	background-color: var(--color-green);
+}
+#edit-btn:hover {
+	background-color: var(--color-blue);
+}
+#delete-btn:hover {
+	background-color: #e91e63;
+}
+.google-icons {
+	color: var(--color-gray);
+}
+
+.completed {
+	background-color: var(--color-green);
+}
+
+@media screen and (max-width: 335px) {
+	.container {
+		min-width: 200px;
+		margin: 0 auto;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	.add-container input::placeholder {
+		font-size: 0.8rem;
+	}
+	select {
+		min-width: 100px;
+	}
+	ul {
+		font-size: 1rem;
+	}
+}
